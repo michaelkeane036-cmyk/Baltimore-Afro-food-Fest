@@ -145,23 +145,31 @@ h2 {
 
 .about { background: white; }
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   margin-top: 3rem;
 }
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .about-text p { 
   font-size: 1.25rem; 
   margin-bottom: 1.5rem; 
-  text-align: left;
+  text-align: center;
 }
 .flags-container {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.05), rgba(155, 29, 100, 0.05));
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .flag-item {
   text-align: center;
