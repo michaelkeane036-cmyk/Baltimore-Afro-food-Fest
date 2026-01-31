@@ -191,6 +191,79 @@ h2 {
   font-weight: 600;
 }
 
+/* Tablet styles (768px and below) */
+@media (max-width: 768px) {
+  section { padding: 5rem 0; }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .about-text {
+    padding: 0 1.5rem;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+  }
+  
+  .flags-container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .flag-item img {
+    width: 100px;
+    height: 67px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media (max-width: 480px) {
+  section { padding: 3rem 0; }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .about-text {
+    padding: 0 1rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flags-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  
+  .flag-item img {
+    width: 80px;
+    height: 53px;
+  }
+  
+  .flag-item p {
+    font-size: 0.8rem;
+  }
+}
 .vendors {
   background: linear-gradient(135deg, #2E8B57 0%, #1A3C34 100%);
   color: white;
