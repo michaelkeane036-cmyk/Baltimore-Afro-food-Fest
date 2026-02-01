@@ -264,6 +264,13 @@ h2 {
     font-size: 0.8rem;
   }
 }
+
+.save-the-date img {
+  display: block;
+  margin: 3rem auto 0 auto; 
+  width: 80%;
+  height: auto;
+}
 .vendors {
   background: linear-gradient(135deg, #2E8B57 0%, #1A3C34 100%);
   color: white;
