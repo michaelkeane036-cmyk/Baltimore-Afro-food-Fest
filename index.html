@@ -17,7 +17,7 @@
         <img src="baltimoreafro1.png" alt="baltimore-afro-logo" class="logo-img">
         <span>BAFF</span>
       </a>
-      <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+      <button class="mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu()">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#vendors">Vendors</a></li>
@@ -31,6 +31,13 @@
 
   <!-- Hero -->
   <header class="hero">
+    <div class="hero-slides" id="heroSlides" aria-hidden="true">
+      <div class="hero-slide hero-slide-original"><img src="https://images.pexels.com/photos/30050960/pexels-photo-30050960/free-photo-of-vibrant-traditional-african-drum-performance-outdoors.jpeg" alt=""></div>
+      <div class="hero-slide hero-slide-grill"><img src="afrobaltimore5.jpeg" alt=""></div>
+      <div class="hero-slide hero-slide-market"><img src="afrobaltimore3.jpeg" alt=""></div>
+      <div class="hero-slide hero-slide-vendor"><img src="afrobaltimore7.jpeg" alt=""></div>
+      <div class="hero-slide hero-slide-chef"><img src="afrobaltimore9.jpeg" alt=""></div>
+    </div>
     <div class="container hero-content">
       <h1>Baltimore Afro-Food Festival</h1>
       <p>FOOD. MUSIC. CULTURE. HERITAGE</p>
@@ -41,8 +48,8 @@
   <!-- About -->
   <section class="about" id="about">
     <div class="container">
-      <h2>About the Festival</h2>
-      <div class="about-content">
+      <h2 class="reveal">About the Festival</h2>
+      <div class="about-content reveal">
         <div class="about-text">
           <p>Baltimore Afro Food Festival 2026 is a one-day outdoor celebration of African and Afro-diaspora cuisine, music, and culture scheduled for Saturday, July 25, 2026, in Baltimore, Maryland.</p>
           <p>The festival will highlight Black-owned restaurants, caterers, chefs, food trucks, and cultural vendors while offering families and young professionals a safe, vibrant Independence Day experience that centers African and Caribbean flavors.</p>
@@ -53,55 +60,55 @@
             <p>BAFF</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Maryland.svg/1200px-Flag_of_Maryland.svg.png" alt="Maryland Flag">
+            <img src="flags/maryland.svg" alt="Maryland Flag">
             <p>Maryland</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt="USA Flag">
+            <img src="flags/us.svg" alt="USA Flag">
             <p>USA</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/1200px-Flag_of_Nigeria.svg.png" alt="Nigerian Flag">
+            <img src="flags/ng.svg" alt="Nigerian Flag">
             <p>Nigeria</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/1200px-Flag_of_Ghana.svg.png" alt="Ghana Flag">
+            <img src="flags/gh.svg" alt="Ghana Flag">
             <p>Ghana</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/1200px-Flag_of_South_Africa.svg.png" alt="South African Flag">
+            <img src="flags/za.svg" alt="South African Flag">
             <p>South Africa</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" alt="UK Flag">
+            <img src="flags/gb.svg" alt="UK Flag">
             <p>UK</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png" alt="Canada Flag">
+            <img src="flags/ca.svg" alt="Canada Flag">
             <p>Canada</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" alt="Brazil Flag">
+            <img src="flags/br.svg" alt="Brazil Flag">
             <p>Brazil</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png" alt="Mexico Flag">
+            <img src="flags/mx.svg" alt="Mexico Flag">
             <p>Mexico</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" alt="China Flag">
+            <img src="flags/cn.svg" alt="China Flag">
             <p>China</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/1200px-Flag_of_Qatar.svg.png" alt="Qatar Flag">
+            <img src="flags/qa.svg" alt="Qatar Flag">
             <p>Qatar</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/1200px-Flag_of_Kenya.svg.png" alt="Kenya Flag">
+            <img src="flags/ke.svg" alt="Kenya Flag">
             <p>Kenya</p>
           </div>
           <div class="flag-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" alt="Spain Flag">
+            <img src="flags/es.svg" alt="Spain Flag">
             <p>Spain</p>
           </div>
         </div>
@@ -109,12 +116,12 @@
     </div>
 
     <!-- Save the Date image -->
-    <div class="save-the-date">
+    <div class="save-the-date reveal">
       <img src="baltimore19.jpg" alt="Afro Food Baltimore Festival 2026">
     </div>
 
     <!-- ── Countdown Timer ── -->
-    <div class="countdown-strip">
+    <div class="countdown-strip reveal">
       <div class="cd-wrap">
         <div class="cd-label">Counting down to<br>July 25, 2026</div>
         <div class="cd-units">
@@ -147,8 +154,8 @@
   <!-- Featured Vendors -->
   <section class="vendors" id="vendors">
     <div class="container">
-      <h2>Featured Vendors & Chefs</h2>
-      <div class="vendor-grid">
+      <h2 class="reveal">Featured Vendors & Chefs</h2>
+      <div class="vendor-grid reveal">
         <div class="vendor-card">
           <img src="https://thumbs.dreamstime.com/b/delicious-west-african-jollof-rice-fried-fish-salad-vibrant-platter-featuring-mound-seasoned-plantains-fresh-side-418724484.jpg" alt="Jollof & Plantains">
           <h3>Jollof Heaven</h3>
@@ -180,14 +187,17 @@
           <p>Bold, aromatic pepper soup made with rich local spices</p>
         </div>
       </div>
+      <div class="vendor-application reveal">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfNeEIfojVYTN_9ay0wjkIeKy-ySrWa_1s0486KjQC79b9FQ/viewform?usp=send_form" class="btn" target="_blank" rel="noopener noreferrer">Apply as Vendor</a>
+      </div>
     </div>
   </section>
 
   <!-- Event Details -->
   <section class="details" id="details">
     <div class="container">
-      <h2>Event Details</h2>
-      <div class="details-grid">
+      <h2 class="reveal">Event Details</h2>
+      <div class="details-grid reveal">
         <div class="detail-item">
           <h3>Date</h3>
           <p>July 25th, 2026</p>
@@ -201,23 +211,17 @@
           <p>Deer Park Owings Mills, Baltimore, MD</p>
         </div>
       </div>
-      <p style="margin-top:3rem; font-size:1.3rem;">Expect mouthwatering food stalls, live Afrobeat & highlife music, cultural dance performances, drumming circles, chef demos, family zones, and a marketplace of African-inspired goods.</p>
+      <p class="reveal" style="margin-top:3rem; font-size:1.3rem;">Expect mouthwatering food stalls, live Afrobeat & highlife music, cultural dance performances, drumming circles, chef demos, family zones, and a marketplace of African-inspired goods.</p>
     </div>
   </section>
 
   <!-- Gallery -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <h2>Gallery & Highlights</h2>
+      <h2 class="reveal">Gallery & Highlights</h2>
       <div class="gallery-container">
         <button class="gallery-btn prev" onclick="slideGallery(-1)">‹</button>
         <div class="gallery-track" id="galleryTrack">
-          <img src="https://thumbs.dreamstime.com/b/vibrant-collage-showcasing-rich-diverse-flavors-west-african-cuisine-collection-features-iconic-jollof-rice-418378086.jpg" alt="Colorful food spread">
-          <img src="https://images.pexels.com/photos/18807625/pexels-photo-18807625/free-photo-of-dancing-man-with-drummers-in-background.jpeg" alt="Cultural dancers">
-          <img src="https://thumbs.dreamstime.com/b/various-african-dishes-featuring-jollof-rice-stew-other-accompaniments-wooden-bowls-vibrant-colorful-spread-perfect-421847803.jpg" alt="African dishes">
-          <img src="https://www.shutterstock.com/image-photo/soweto-south-africa-september-17-600nw-1741262363.jpg" alt="Festival crowd">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="Food preparation">
-          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=500" alt="Festival atmosphere">
           <img src="afrobaltimore1.jpeg" alt="BAFF First Edition">
           <img src="afrobaltimore2.jpeg" alt="BAFF First Edition Crowd">
           <img src="afrobaltimore3.jpeg" alt="BAFF Food Stall">
@@ -230,6 +234,12 @@
           <img src="afrobaltimore10.jpeg" alt="BAFF First Edition">
           <img src="afrobaltimore11.jpeg" alt="BAFF First Edition">
           <img src="afrobaltimore12.jpeg" alt="BAFF First Edition">
+          <img src="https://thumbs.dreamstime.com/b/vibrant-collage-showcasing-rich-diverse-flavors-west-african-cuisine-collection-features-iconic-jollof-rice-418378086.jpg" alt="Colorful food spread">
+          <img src="https://images.pexels.com/photos/18807625/pexels-photo-18807625/free-photo-of-dancing-man-with-drummers-in-background.jpeg" alt="Cultural dancers">
+          <img src="https://thumbs.dreamstime.com/b/various-african-dishes-featuring-jollof-rice-stew-other-accompaniments-wooden-bowls-vibrant-colorful-spread-perfect-421847803.jpg" alt="African dishes">
+          <img src="https://www.shutterstock.com/image-photo/soweto-south-africa-september-17-600nw-1741262363.jpg" alt="Festival crowd">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="Food preparation">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=500" alt="Festival atmosphere">
         </div>
         <button class="gallery-btn next" onclick="slideGallery(1)">›</button>
       </div>
@@ -239,9 +249,9 @@
   <!-- Contact Form -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2>Get in Touch</h2>
-      <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Have questions or want to share something with us? We'd love to hear from you!</p>
-      <form class="contact-form" action="https://formspree.io/f/mjggybby" method="POST">
+      <h2 class="reveal">Get in Touch</h2>
+      <p class="reveal" style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Have questions or want to share something with us? We'd love to hear from you!</p>
+      <form class="contact-form reveal" action="https://formspree.io/f/mjggybby" method="POST">
         <div class="form-group">
           <label for="name">Your Name *</label>
           <input type="text" id="name" name="name" required>
@@ -268,10 +278,10 @@
   <!-- CTA -->
   <section class="cta" id="tickets">
     <div class="container">
-      <h2>Ready to Join the Flavor Revolution?</h2>
-      <div class="cta-buttons">
+      <h2 class="reveal">Ready to Join the Flavor Revolution?</h2>
+      <div class="cta-buttons reveal">
         <a href="#" class="btn">Buy Tickets</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfNeEIfojVYTN_9ay0wjkIeKy-ySrWa_1s0486KjQC79b9FQ/viewform?usp=send_form" class="btn">Apply as Vendor</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfNeEIfojVYTN_9ay0wjkIeKy-ySrWa_1s0486KjQC79b9FQ/viewform?usp=send_form" class="btn" target="_blank" rel="noopener noreferrer">Apply as Vendor</a>
         <a href="#" class="btn">Join Newsletter</a>
       </div>
     </div>

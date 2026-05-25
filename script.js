@@ -1,45 +1,110 @@
 // Mobile menu toggle
 function toggleMenu() {
   const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
+  const toggle = document.querySelector('.mobile-toggle');
+  const isOpen = navLinks.classList.toggle('active');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+  toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
 }
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       document.getElementById('navLinks').classList.remove('active');
+      const toggle = document.querySelector('.mobile-toggle');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation menu');
     }
   });
 });
+
+// Hero image slider
+const heroSlides = document.getElementById('heroSlides');
+let heroSlide = 0;
+
+if (heroSlides && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const heroSlideCount = heroSlides.children.length;
+  heroSlides.appendChild(heroSlides.firstElementChild.cloneNode(true));
+
+  setInterval(() => {
+    heroSlide++;
+    heroSlides.style.transform = `translateX(-${heroSlide * 100}%)`;
+  }, 5500);
+
+  heroSlides.addEventListener('transitionend', () => {
+    if (heroSlide !== heroSlideCount) return;
+    heroSlide = 0;
+    heroSlides.classList.add('is-resetting');
+    heroSlides.style.transform = 'translateX(0)';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => heroSlides.classList.remove('is-resetting'));
+    });
+  });
+}
 
 // Gallery slider
 let currentSlide = 0;
 const track = document.getElementById('galleryTrack');
 const slides = track.children;
-const slideWidth = 350 + 24; // image width + gap
+
+function getSlideWidth() {
+  const firstSlide = slides[0];
+  const gap = parseFloat(getComputedStyle(track).gap) || 0;
+  return firstSlide.getBoundingClientRect().width + gap;
+}
+
+function getMaxSlide() {
+  return Math.max(0, slides.length - Math.floor(track.parentElement.offsetWidth / getSlideWidth()));
+}
+
+function positionGallery() {
+  currentSlide = Math.min(currentSlide, getMaxSlide());
+  track.style.transform = `translateX(-${currentSlide * getSlideWidth()}px)`;
+}
 
 function slideGallery(direction) {
-  const maxSlide = slides.length - Math.floor(track.parentElement.offsetWidth / slideWidth);
+  const maxSlide = getMaxSlide();
   currentSlide += direction;
   if (currentSlide < 0) currentSlide = 0;
   if (currentSlide > maxSlide) currentSlide = maxSlide;
-  track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  positionGallery();
 }
 
 // Auto-slide gallery
 setInterval(() => {
-  const maxSlide = slides.length - Math.floor(track.parentElement.offsetWidth / slideWidth);
+  const maxSlide = getMaxSlide();
   if (currentSlide >= maxSlide) {
     currentSlide = 0;
   } else {
     currentSlide++;
   }
-  track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  positionGallery();
 }, 5000);
+
+window.addEventListener('resize', positionGallery);
+
+// Reveal supporting content once as it enters the viewport
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -36px' });
+
+  revealElements.forEach(element => revealObserver.observe(element));
+} else {
+  revealElements.forEach(element => element.classList.add('is-visible'));
+}
 
 // ── Countdown Timer ──
 const cdTarget = new Date('July 25, 2026 10:00:00').getTime();
