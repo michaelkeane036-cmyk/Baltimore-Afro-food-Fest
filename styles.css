@@ -232,7 +232,138 @@ h2 {
   object-fit: contain;
   padding: 0.3rem;
 }
-.flag-item img:hover {
+.flag-icon {
+  position: relative;
+  display: block;
+  width: clamp(66px, 10vw, 88px);
+  height: clamp(66px, 10vw, 88px);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.flag-icon::before,
+.flag-icon::after {
+  content: '';
+  position: absolute;
+}
+.flag-md {
+  background:
+    linear-gradient(45deg, transparent 42%, #cf202f 42% 58%, transparent 58%),
+    linear-gradient(-45deg, transparent 42%, #cf202f 42% 58%, transparent 58%),
+    conic-gradient(#f4c430 0 25%, #111 0 50%, #f4c430 0 75%, #111 0);
+}
+.flag-us {
+  background: repeating-linear-gradient(to bottom, #b22234 0 7.7%, #fff 7.7% 15.4%);
+}
+.flag-us::before {
+  inset: 0 auto auto 0;
+  width: 48%;
+  height: 54%;
+  background: #3c3b6e;
+}
+.flag-ng {
+  background: linear-gradient(to right, #008751 0 33.33%, #fff 33.33% 66.67%, #008751 66.67%);
+}
+.flag-gh {
+  background: linear-gradient(to bottom, #ce1126 0 33.33%, #fcd116 33.33% 66.67%, #006b3f 66.67%);
+}
+.flag-gh::after {
+  top: 37%;
+  left: 43%;
+  width: 16%;
+  height: 20%;
+  background: #111;
+  clip-path: polygon(50% 0, 62% 36%, 100% 36%, 69% 58%, 81% 100%, 50% 74%, 19% 100%, 31% 58%, 0 36%, 38% 36%);
+}
+.flag-za {
+  background: linear-gradient(to bottom, #de3831 0 34%, #fff 34% 40%, #007a4d 40% 60%, #fff 60% 66%, #002395 66%);
+}
+.flag-za::before {
+  inset: 0 auto 0 0;
+  width: 50%;
+  background: #000;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.flag-za::after {
+  inset: 8% auto 8% 0;
+  width: 48%;
+  background: #ffb81c;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 82%, 70% 50%, 0 18%);
+}
+.flag-gb {
+  background:
+    linear-gradient(90deg, transparent 40%, #fff 40% 60%, transparent 60%),
+    linear-gradient(0deg, transparent 40%, #fff 40% 60%, transparent 60%),
+    linear-gradient(90deg, transparent 45%, #c8102e 45% 55%, transparent 55%),
+    linear-gradient(0deg, transparent 45%, #c8102e 45% 55%, transparent 55%),
+    linear-gradient(34deg, transparent 43%, #fff 43% 57%, transparent 57%),
+    linear-gradient(-34deg, transparent 43%, #fff 43% 57%, transparent 57%),
+    #012169;
+}
+.flag-ca {
+  background: linear-gradient(to right, #d80621 0 25%, #fff 25% 75%, #d80621 75%);
+}
+.flag-ca::after {
+  inset: 30% 39%;
+  background: #d80621;
+  clip-path: polygon(50% 0, 58% 30%, 77% 22%, 66% 48%, 100% 45%, 68% 65%, 74% 90%, 52% 73%, 50% 100%, 48% 73%, 26% 90%, 32% 65%, 0 45%, 34% 48%, 23% 22%, 42% 30%);
+}
+.flag-br {
+  background: #009b3a;
+}
+.flag-br::before {
+  inset: 20%;
+  background: #ffdf00;
+  transform: rotate(45deg);
+}
+.flag-br::after {
+  inset: 34%;
+  border-radius: 50%;
+  background: #002776;
+}
+.flag-mx {
+  background: linear-gradient(to right, #006847 0 33.33%, #fff 33.33% 66.67%, #ce1126 66.67%);
+}
+.flag-mx::after {
+  inset: 42%;
+  border-radius: 50%;
+  background: #8b6332;
+}
+.flag-cn {
+  background: #de2910;
+}
+.flag-cn::after {
+  top: 22%;
+  left: 22%;
+  width: 28%;
+  height: 28%;
+  background: #ffde00;
+  clip-path: polygon(50% 0, 62% 36%, 100% 36%, 69% 58%, 81% 100%, 50% 74%, 19% 100%, 31% 58%, 0 36%, 38% 36%);
+}
+.flag-qa {
+  background: linear-gradient(to right, #fff 0 30%, #8a1538 30%);
+}
+.flag-qa::after {
+  inset: 0 auto 0 24%;
+  width: 17%;
+  background: #fff;
+  clip-path: polygon(0 0, 100% 5.5%, 0 11%, 100% 16.5%, 0 22%, 100% 27.5%, 0 33%, 100% 38.5%, 0 44%, 100% 50%, 0 56%, 100% 61.5%, 0 67%, 100% 72.5%, 0 78%, 100% 83.5%, 0 89%, 100% 94.5%, 0 100%);
+}
+.flag-ke {
+  background: linear-gradient(to bottom, #111 0 29%, #fff 29% 35%, #bb0000 35% 65%, #fff 65% 71%, #006600 71%);
+}
+.flag-ke::after {
+  inset: 26% 40%;
+  border-radius: 50%;
+  background: #bb0000;
+  border: 2px solid #fff;
+}
+.flag-es {
+  background: linear-gradient(to bottom, #aa151b 0 25%, #f1bf00 25% 75%, #aa151b 75%);
+}
+.flag-item img:hover,
+.flag-icon:hover {
   transform: scale(1.08);
 }
 .flag-item p {
