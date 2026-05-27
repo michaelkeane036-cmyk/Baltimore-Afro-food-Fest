@@ -34,9 +34,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 900; }
   width: 42px;
   object-fit: contain;
 }
-.nav-logo span {
-  color: var(--primary);
-}
 nav {
   position: fixed;
   top: 0;
@@ -208,7 +205,6 @@ h2 {
   background: linear-gradient(135deg, rgba(212, 160, 23, 0.05), rgba(155, 29, 100, 0.05));
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  box-sizing: border-box;
   overflow: hidden;
 }
 .flag-item {
@@ -492,7 +488,6 @@ h2 {
   .hero h1 { font-size: clamp(2.6rem, 12vw, 4rem); }
   .hero-slide img { object-position: center center; }
   .hero-slide-grill img { object-position: center bottom; }
-  .about-text p { text-align: center; }
   .flags-container {
     grid-template-columns: repeat(6, 1fr);
     padding: 1rem 0.6rem;
@@ -519,7 +514,6 @@ h2 {
     align-items: center;
     text-align: center;
     padding: 1.2rem 1rem;
-    border-radius: 12px 12px 0 0;
   }
   .cd-label { font-size: 0.72rem; }
   .cd-num { font-size: 1.5rem; }
@@ -528,7 +522,7 @@ h2 {
 
 /* Vendors */
 .vendors {
-  background: linear-gradient(135deg, #2E8B57 0%, #1A3C34 100%);
+  background: linear-gradient(135deg, var(--accent-green) 0%, #1A3C34 100%);
   color: white;
 }
 .vendor-grid {
