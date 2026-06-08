@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Baltimore Afro-Food Festival | Celebrate • Savor • Connect</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260608-1">
+  <link rel="stylesheet" href="styles.css?v=20260608-2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -248,11 +248,52 @@
     </div>
   </section>
 
+  <!-- Contact Form -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="reveal">Get in Touch</h2>
+      <p class="reveal" style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Have questions or want to share something with us? We'd love to hear from you!</p>
+      <form class="contact-form reveal" action="https://formspree.io/f/mjggybby" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="_replyto" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="tickets">
+    <div class="container">
+      <h2 class="reveal">Ready to Join the Flavor Revolution?</h2>
+      <div class="cta-buttons reveal">
+        <a href="#" class="btn">Buy Tickets</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfNeEIfojVYTN_9ay0wjkIeKy-ySrWa_1s0486KjQC79b9FQ/viewform?usp=send_form" class="btn" target="_blank" rel="noopener noreferrer">Apply as Vendor</a>
+        <a href="#" class="btn">Join Newsletter</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Sponsors -->
   <section class="sponsors" id="sponsors">
     <div class="container">
       <h2 class="reveal">Our Sponsors</h2>
-      <p class="sponsor-intro reveal">Celebrating the businesses and community partners supporting Baltimore Afro-Food Festival.</p>
+      <p class="sponsor-intro reveal">Community partners supporting Baltimore Afro-Food Festival.</p>
       <div class="sponsor-grid reveal">
         <article class="sponsor-card">
           <img src="68a1cf93-acf0-45ef-984c-9e5d803f4daa.jpg" alt="Sumptuous Cakes and Events sponsor logo">
@@ -299,47 +340,6 @@
         <article class="sponsor-card">
           <img src="IMG_4807.PNG" alt="Lily's Finger Chops sponsor flyer">
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="reveal">Get in Touch</h2>
-      <p class="reveal" style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Have questions or want to share something with us? We'd love to hear from you!</p>
-      <form class="contact-form reveal" action="https://formspree.io/f/mjggybby" method="POST">
-        <div class="form-group">
-          <label for="name">Your Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="_replyto" required>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject">
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message *</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <!-- Honeypot anti-spam -->
-        <input type="text" name="_gotcha" style="display:none">
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="tickets">
-    <div class="container">
-      <h2 class="reveal">Ready to Join the Flavor Revolution?</h2>
-      <div class="cta-buttons reveal">
-        <a href="#" class="btn">Buy Tickets</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfNeEIfojVYTN_9ay0wjkIeKy-ySrWa_1s0486KjQC79b9FQ/viewform?usp=send_form" class="btn" target="_blank" rel="noopener noreferrer">Apply as Vendor</a>
-        <a href="#" class="btn">Join Newsletter</a>
       </div>
     </div>
   </section>
