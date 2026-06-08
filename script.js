@@ -24,6 +24,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Background music. Browsers may block audible autoplay until first interaction.
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+function startBackgroundMusic() {
+  if (!backgroundMusic) return;
+  backgroundMusic.volume = 0.32;
+  const playPromise = backgroundMusic.play();
+  if (playPromise) {
+    playPromise.catch(() => {
+      document.addEventListener('click', startBackgroundMusic, { once: true });
+      document.addEventListener('touchstart', startBackgroundMusic, { once: true });
+      document.addEventListener('keydown', startBackgroundMusic, { once: true });
+      document.addEventListener('scroll', startBackgroundMusic, { once: true });
+    });
+  }
+}
+
+startBackgroundMusic();
+
 // Hero image slider
 const heroSlides = document.getElementById('heroSlides');
 let heroSlide = 0;
