@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Baltimore Afro-Food Festival | Celebrate • Savor • Connect</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260614-1">
+  <link rel="stylesheet" href="styles.css?v=20260611-1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -220,57 +220,30 @@
   <!-- Gallery -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <h2 class="reveal">Moments Made for the Spotlight</h2>
-      <p class="gallery-intro reveal">A closer look at the people, flavors, culture, and community energy behind the festival.</p>
-      <div class="gallery-grid reveal">
-        <figure class="gallery-card">
-          <img src="afrobaltimore1.jpeg" alt="Opening moments at the Baltimore Afro-Food Festival">
-          <figcaption>Opening Moments</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore2.jpeg" alt="Festival crowd enjoying the Baltimore Afro-Food Festival">
-          <figcaption>Festival Crowd</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore3.jpeg" alt="Food stall setup at the Baltimore Afro-Food Festival">
-          <figcaption>Food Stall Energy</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore4.jpeg" alt="Community smiles during the Baltimore Afro-Food Festival">
-          <figcaption>Community Smiles</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore5.jpeg" alt="Grill and flavor moment at the Baltimore Afro-Food Festival">
-          <figcaption>Grill &amp; Flavor</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore6.jpeg" alt="Cultural moment at the Baltimore Afro-Food Festival">
-          <figcaption>Culture In Motion</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore7.jpeg" alt="Vendor spotlight at the Baltimore Afro-Food Festival">
-          <figcaption>Vendor Spotlight</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore8.jpeg" alt="Market finds at the Baltimore Afro-Food Festival">
-          <figcaption>Market Finds</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore9.jpeg" alt="Chef moment at the Baltimore Afro-Food Festival">
-          <figcaption>Chef Moments</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore10.jpeg" alt="Festival highlight from the Baltimore Afro-Food Festival">
-          <figcaption>Festival Highlights</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore11.jpeg" alt="Diaspora joy at the Baltimore Afro-Food Festival">
-          <figcaption>Diaspora Joy</figcaption>
-        </figure>
-        <figure class="gallery-card">
-          <img src="afrobaltimore12.jpeg" alt="Taste of Baltimore moment at the Afro-Food Festival">
-          <figcaption>Taste Of Baltimore</figcaption>
-        </figure>
+      <h2 class="reveal">Gallery & Highlights</h2>
+      <div class="gallery-container">
+        <button class="gallery-btn prev" onclick="slideGallery(-1)">‹</button>
+        <div class="gallery-track" id="galleryTrack">
+          <img src="afrobaltimore1.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore2.jpeg" alt="BAFF First Edition Crowd">
+          <img src="afrobaltimore3.jpeg" alt="BAFF Food Stall">
+          <img src="afrobaltimore4.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore5.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore6.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore8.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore7.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore9.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore10.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore11.jpeg" alt="BAFF First Edition">
+          <img src="afrobaltimore12.jpeg" alt="BAFF First Edition">
+          <img src="https://thumbs.dreamstime.com/b/vibrant-collage-showcasing-rich-diverse-flavors-west-african-cuisine-collection-features-iconic-jollof-rice-418378086.jpg" alt="Colorful food spread">
+          <img src="https://images.pexels.com/photos/18807625/pexels-photo-18807625/free-photo-of-dancing-man-with-drummers-in-background.jpeg" alt="Cultural dancers">
+          <img src="https://thumbs.dreamstime.com/b/various-african-dishes-featuring-jollof-rice-stew-other-accompaniments-wooden-bowls-vibrant-colorful-spread-perfect-421847803.jpg" alt="African dishes">
+          <img src="https://www.shutterstock.com/image-photo/soweto-south-africa-september-17-600nw-1741262363.jpg" alt="Festival crowd">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="Food preparation">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=500" alt="Festival atmosphere">
+        </div>
+        <button class="gallery-btn next" onclick="slideGallery(1)">›</button>
       </div>
     </div>
   </section>

@@ -67,6 +67,47 @@ if (heroSlides && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
   });
 }
 
+// Gallery slider
+let currentSlide = 0;
+const track = document.getElementById('galleryTrack');
+const slides = track.children;
+
+function getSlideWidth() {
+  const firstSlide = slides[0];
+  const gap = parseFloat(getComputedStyle(track).gap) || 0;
+  return firstSlide.getBoundingClientRect().width + gap;
+}
+
+function getMaxSlide() {
+  return Math.max(0, slides.length - Math.floor(track.parentElement.offsetWidth / getSlideWidth()));
+}
+
+function positionGallery() {
+  currentSlide = Math.min(currentSlide, getMaxSlide());
+  track.style.transform = `translateX(-${currentSlide * getSlideWidth()}px)`;
+}
+
+function slideGallery(direction) {
+  const maxSlide = getMaxSlide();
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = 0;
+  if (currentSlide > maxSlide) currentSlide = maxSlide;
+  positionGallery();
+}
+
+// Auto-slide gallery
+setInterval(() => {
+  const maxSlide = getMaxSlide();
+  if (currentSlide >= maxSlide) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  positionGallery();
+}, 5000);
+
+window.addEventListener('resize', positionGallery);
+
 // Reveal supporting content once as it enters the viewport
 const revealElements = document.querySelectorAll('.reveal');
 
